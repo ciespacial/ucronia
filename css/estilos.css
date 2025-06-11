@@ -265,12 +265,12 @@ a{
     }
 }
 
-.principalIndex{
+.principalIndex {
     background-image: url(../assets/img/04.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 123vh;
+    min-height: 100vh; /* Evita una altura fija */
     text-align: center;
     padding-top: 20px;
     .contenedorTextoPrincipalIndex{
@@ -296,6 +296,33 @@ a{
             }
     }
 }
+
+/* Ajustes para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .principalIndex {
+        background-size: contain; /* Cambia a "contain" en pantallas pequeñas */
+        background-position: center;
+    }
+
+    .contenedorTextoPrincipalIndex {
+        width: 80%; /* Aumenta el ancho del texto */
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .principalIndex {
+        background-size: auto 100%; /* Ajuste adicional para móviles */
+        background-position: top;
+    }
+
+    .contenedorTextoPrincipalIndex {
+        width: 90%;
+        font-size: 12px;
+    }
+}
+
+
 
 .realidadAumentada{
     display: flex;
